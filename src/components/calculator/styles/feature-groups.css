@@ -1,0 +1,51 @@
+.groups { border-top: 1px solid var(--line); }
+.group { border-bottom: 1px solid var(--line); }
+
+.group-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 72px;
+  padding: 16px 12px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 0.15s;
+}
+.group-btn:hover { background: var(--hover); }
+.group-btn:focus-visible { outline-offset: -2px; }
+
+.group-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.group-count {
+  flex: none;
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.group-count.has { color: var(--ink); font-weight: 600; }
+
+.group-chevron {
+  flex: none;
+  display: grid;
+  color: var(--muted);
+  transition: transform 0.25s;
+}
+.group-chevron.open { transform: rotate(180deg); }
+
+/* features inside a group sit indented under the group title */
+.group-body { padding: 0 0 16px 40px; }
+.group-body .row:first-child { border-top: 1px solid var(--line); }
+.group-body .row:last-child { border-bottom: 0; }
+
+@media (max-width: 480px) {
+  .group-btn { gap: 12px; }
+  .group-btn .row-desc { display: none; }
+  .group-body { padding-left: 0; }
+}

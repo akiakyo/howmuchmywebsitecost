@@ -1,0 +1,31 @@
+.toast {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 12px;
+  background: var(--danger);
+  color: var(--on-danger);
+  font-size: 15px;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.toast > span { flex: 1; }
+.toast-close {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.toast-close:focus-visible { outline-color: var(--on-danger); }
